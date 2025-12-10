@@ -1,8 +1,8 @@
 ---
-title: "An example report "
-subtitle: "Exploring how to report out from community calls"
-authors: ["Author Number One", "Author Number Two"]
-date: "August 13, 2024"
+title: "Open Source Dependency Management and Supply Chains"
+subtitle: "A team playbook"
+authors: ["Andrew Nesbitt", "Ann Wells", "Robert Castelo", "Dan Sholler", "Jonah Duckles", "Beth Duckles"]
+date: "November 20, 2025"
 format:
     html: 
       self-contained: true
@@ -12,45 +12,198 @@ execute:
   echo: fenced
 reference-location: margin
 citation-location: margin
-bibliography: bibliography.bib
 ---
 
-This template can be used to create simple reports for reporting the output / outcomes of activities and events. It is built and rendered using quarto 
+*In this document, we share insights discussed in the Chan-Zuckerberg Initiative’s Essential Open Source Software program community call held on November 20, 2025\.*
 
-# Section 1 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat pretium tempus. Mauris eget nisl ante. Etiam iaculis, nisl ultricies facilisis aliquet, urna odio porta nisi, non tristique enim sapien eget mi. Proin sed orci lobortis, sodales orci quis, consectetur nulla. Phasellus eget enim rhoncus, fermentum nisi ut, aliquet nulla. Sed mollis ullamcorper dolor, at tempus est vulputate eget. Mauris consequat felis nec eros venenatis, sit amet tempor neque consectetur. Curabitur pharetra, metus a sodales fermentum, neque libero sollicitudin magna, eget fermentum sapien dolor sit amet dolor. Fusce odio felis, pulvinar in laoreet at, sodales sed magna. Sed sagittis, enim id feugiat laoreet, erat nisi rhoncus ipsum, vitae suscipit quam nulla id libero. Integer condimentum, eros eget rutrum porta, tortor turpis sodales ligula, a facilisis nisi tortor id risus. [^note]
+## Introduction
 
-[^note]: this is a sidenote. it can contain whatever HTML content you want in it. 
+Managing dependencies in open source projects is about people, processes, and culture and how your team brings these together for the benefit of your project. This playbook helps teams develop an approach to dependency management that works for them while balancing security, maintainability, and developer’s time.
 
-## Subsection 1.1
+---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat pretium tempus. Mauris eget nisl ante. Etiam iaculis, nisl ultricies facilisis aliquet, urna odio porta nisi, non tristique enim sapien eget mi. Proin sed orci lobortis, sodales orci quis, consectetur nulla. Phasellus eget enim rhoncus, fermentum nisi ut, aliquet nulla. Sed mollis ullamcorper dolor, at tempus est vulputate eget. Mauris consequat felis nec eros venenatis, sit amet tempor neque consectetur. Curabitur pharetra, metus a sodales fermentum, neque libero sollicitudin magna, eget fermentum sapien dolor sit amet dolor. Fusce odio felis, pulvinar in laoreet at, sodales sed magna. Sed sagittis, enim id feugiat laoreet, erat nisi rhoncus ipsum, vitae suscipit quam nulla id libero. Integer condimentum, eros eget rutrum porta, tortor turpis sodales ligula, a facilisis nisi tortor id risus. ^[You can also include notes inline, and don't need to create an identifier for them]
+## Part 1: Building Your Team’s Dependency Culture
 
-# Section 2 
+### 1.1 Establishing Shared Ownership
 
-![A Venn diagram of the Scientific Open Source Landscape](https://dropshare.duckles.nz/scienceoss.jpg)
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat pretium tempus. Mauris eget nisl ante. Etiam iaculis, nisl ultricies facilisis aliquet, urna odio porta nisi, non tristique enim sapien eget mi. Proin sed orci lobortis, sodales orci quis, consectetur nulla. Phasellus eget enim rhoncus, fermentum nisi ut, aliquet nulla. Sed mollis ullamcorper dolor, at tempus est vulputate eget. Mauris consequat felis nec eros venenatis, sit amet tempor neque consectetur. Curabitur pharetra, metus a sodales fermentum, neque libero sollicitudin magna, eget fermentum sapien dolor sit amet dolor. Fusce odio felis, pulvinar in laoreet at, sodales sed magna. Sed sagittis, enim id feugiat laoreet, erat nisi rhoncus ipsum, vitae suscipit quam nulla id libero. Integer condimentum, eros eget rutrum porta, tortor turpis sodales ligula, a facilisis nisi tortor id risus. [@geiger_challenges_2018]
+**The Challenge:** Dependencies often become “someone else’s problem” until they break something critical.
 
-# Conclusion 
+**Action Items:**
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat pretium tempus. Mauris eget nisl ante. Etiam iaculis, nisl ultricies facilisis aliquet, urna odio porta nisi, non tristique enim sapien eget mi. Proin sed orci lobortis, sodales orci quis, consectetur nulla. Phasellus eget enim rhoncus, fermentum nisi ut, aliquet nulla. Sed mollis ullamcorper dolor, at tempus est vulputate eget. Mauris consequat felis nec eros venenatis, sit amet tempor neque consectetur. Curabitur pharetra, metus a sodales fermentum, neque libero sollicitudin magna, eget fermentum sapien dolor sit amet dolor. Fusce odio felis, pulvinar in laoreet at, sodales sed magna. Sed sagittis, enim id feugiat laoreet, erat nisi rhoncus ipsum, vitae suscipit quam nulla id libero. Integer condimentum, eros eget rutrum porta, tortor turpis sodales ligula, a facilisis nisi tortor id risus.
+* Designate rotating dependency champions (quarterly rotation)
+* Create a dedicated communication channel (\#dependencies)
+* Add dependency review to your PR checklist
+* Develop strategies for removing or replacing dependencies where possible
+* Document who to contact for different dependency ecosystems
 
-## Including Tables 
-| Country           | Population      |
-|-------------------|-----------------|
-| China             | 1,412,600,000   |
-| India             | 1,366,000,000   |
-| United States     | 331,000,000     |
-| Indonesia         | 273,500,000     |
-| Pakistan          | 220,900,000     |
-| Brazil            | 212,600,000     |
-| Nigeria           | 206,100,000     |
-| Bangladesh        | 166,300,000     |
-| Russia            | 146,700,000     |
-| Mexico            | 126,000,000     |
+**Team Discussion Prompts:**
 
-<!-- FOOTER & LOGOS Please do not modify below --> 
+* What dependency issues keep us up at night?
+* Which dependencies do we struggle with most?
+* What are we already doing well in our dependency management?
+
+## Part 2: Moving from Reactive to Proactive
+
+### 2.1 The Dependency Maturity Model
+
+| Stage | Characteristics | Next Steps |
+| ----- | ----- | ----- |
+| **Firefighting** | • Updates only when things break • No visibility into dependencies • Manual, ad-hoc processes | Start tracking manually |
+| **Aware** | • Know what dependencies exist • Some automated scanning • Reactive to security alerts | Implement basic automation |
+| **Managed** | • Regular update cycles • Automated testing • Clear ownership | Develop update policies |
+| **Optimized** | • Proactive monitoring • Dependency health metrics • Upstream engagement | Contribute back upstream |
+
+### 2.2 Essential Capabilities Checklist
+
+**Technical Prerequisites:**
+
+* Automated testing suite
+* Lockfiles or similar reproducibility mechanisms
+* Dependency scanning in CI/CD
+* SBOM generation capability
+
+**Social Prerequisites:**
+
+* Clear communication channels with upstream projects
+* Regular team discussions about dependencies
+* Documented escalation paths
+* Time allocated for dependency maintenance
+
+---
+
+## Part 3: Practical Implementation Guide
+
+### 3.1 Week 1-2: Discovery Phase
+
+**Inventory Your Dependencies:**
+
+1. Generate a complete dependency tree
+2. Identify critical vs. nice-to-have dependencies
+3. Map dependencies to team members who understand them
+4. Note any dependencies without clear maintainers
+
+**Tools to Consider:**
+
+* GitHub/GitLab dependency graphs
+* [**Ecosyste.ms**](https://ecosyste.ms) for ecosystem-wide visibility
+* Language-specific tools (npm audit, pip-audit, etc.)
+
+### 3.2 Week 3-4: Establish Baselines
+
+**Set Up Monitoring:**
+
+***\# Example: Monthly Dependency Review Checklist***  
+**\- \[ \] Run security scans**  
+**\- \[ \] Review automated PR success rates**  
+**\- \[ \] Check upstream project health**  
+**\- \[ \] Update team wiki/documentation**  
+**\- \[ \] Discuss any concerning trends**
+
+**Configure Automation Thoughtfully:**
+
+* Start with security-only updates
+* Limit update frequency (e.g., max 5 PRs/week)
+* Group related updates
+* Ensure CI/CD catches breaking changes
+
+### 3.3 Week 5-6: Build Processes
+
+**Create Communication Workflows:**
+
+**![][image1]**
+
+**Establish Review Practices:**
+* Add dependency impact to PR templates
+* Require justification for new dependencies
+* Consider “dependency cooldown” settings in dependency tools
+
+---
+
+## Part 4: Advanced Strategies
+
+### 4.1 Reducing Dependency Surface Area
+
+**The “Hedge Trimming” Approach:**
+
+1. Audit current dependencies quarterly
+2. Identify barely-used dependencies
+3. Consider inlining simple utilities
+4. Make heavy dependencies optional
+5. Split packages to isolate dependency-heavy features
+
+### 4.2 Upstream Engagement
+
+**Building Relationships:**
+
+* Join upstream project communities
+* Contribute fixes back
+* Share your use cases
+* Participate in roadmap discussions
+
+**Early Warning Systems:**
+
+* Subscribe to upstream release notes
+* Monitor deprecation notices
+* Track upstream issue trackers
+* Build relationships with maintainers
+
+### 4.3 Container and Deployment Strategies
+
+**Reproducibility Approaches:**
+
+* Use containers for consistent environments
+* Implement proper tagging strategies
+* Document system-level dependencies
+* Consider managed build systems (like Bioconductor’s)
+
+---
+
+## Part 5: Keeping It Fresh
+
+### 5.1 Regular Team Activities
+
+**Monthly Dependency Coffee Chat:**
+
+* 30-minute informal discussion
+* Rotate who presents a “dependency of the month”
+* Share recent challenges and solutions
+* Celebrate successful updates
+
+**Quarterly Dependency Health Check:**
+
+* Review policy effectiveness
+* Analyze automation metrics (e.g., % of automated PRs merged)
+* Identify process improvements
+* Plan for major updates
+
+## Resources and Further Reading
+
+### Essential Tools
+
+* [**Ecosyste.ms**](https://ecosyste.ms) \- Dependency ecosystem monitoring
+* [**Dependabot Insights**](https://dependabot.ecosyste.ms/) \- Automation effectiveness metrics
+* [**CHAOSS Security Guide**](https://chaoss.community/practitioner-guide-security/)
+* [**PyOpenSci Review Guide**](https://www.pyopensci.org/software-peer-review/index.html)
+
+### Recommended Reading
+
+* [**Dependency Cooldowns**](https://blog.yossarian.net/2025/11/21/We-should-all-be-using-dependency-cooldowns)
+* CISA SBOM Resources
+* Language-specific security guides
+
+### Community Resources
+
+* Join \#dependency-management in your language community
+* CHAOSS working groups
+* OpenSSF Best Practices Badge program
+
+---
+
+*Remember: Good dependency management is a journey, not a destination. Start small, iterate often, and celebrate progress along the way.*
+
+[image1]: <data:image/png;base64,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>
+
 ----
 _This resource was generated as part of [CZI's EOSS](https://chanzuckerberg.com/eoss/) Community Calls during late 2024 with 
 [Organizational Mycology](https://orgmycology.com) facilitating discussions, gathering input, 
