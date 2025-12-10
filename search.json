@@ -2,30 +2,58 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "An example report",
+    "title": "Open Source Dependency Management and Supply Chains",
     "section": "",
-    "text": "This template can be used to create simple reports for reporting the output / outcomes of activities and events. It is built and rendered using quarto"
+    "text": "In this document, we share insights discussed in the Chan-Zuckerberg Initiative’s Essential Open Source Software program community call held on November 20, 2025."
   },
   {
-    "objectID": "index.html#subsection-1.1",
-    "href": "index.html#subsection-1.1",
-    "title": "An example report",
-    "section": "Subsection 1.1",
-    "text": "Subsection 1.1\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla placerat pretium tempus. Mauris eget nisl ante. Etiam iaculis, nisl ultricies facilisis aliquet, urna odio porta nisi, non tristique enim sapien eget mi. Proin sed orci lobortis, sodales orci quis, consectetur nulla. Phasellus eget enim rhoncus, fermentum nisi ut, aliquet nulla. Sed mollis ullamcorper dolor, at tempus est vulputate eget. Mauris consequat felis nec eros venenatis, sit amet tempor neque consectetur. Curabitur pharetra, metus a sodales fermentum, neque libero sollicitudin magna, eget fermentum sapien dolor sit amet dolor. Fusce odio felis, pulvinar in laoreet at, sodales sed magna. Sed sagittis, enim id feugiat laoreet, erat nisi rhoncus ipsum, vitae suscipit quam nulla id libero. Integer condimentum, eros eget rutrum porta, tortor turpis sodales ligula, a facilisis nisi tortor id risus. 2\n2 You can also include notes inline, and don’t need to create an identifier for them"
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Open Source Dependency Management and Supply Chains",
+    "section": "Introduction",
+    "text": "Introduction\nManaging dependencies in open source projects is about people, processes, and culture and how your team brings these together for the benefit of your project. This playbook helps teams develop an approach to dependency management that works for them while balancing security, maintainability, and developer’s time."
   },
   {
-    "objectID": "index.html#including-tables",
-    "href": "index.html#including-tables",
-    "title": "An example report",
-    "section": "Including Tables",
-    "text": "Including Tables\n\n\n\nCountry\nPopulation\n\n\n\n\nChina\n1,412,600,000\n\n\nIndia\n1,366,000,000\n\n\nUnited States\n331,000,000\n\n\nIndonesia\n273,500,000\n\n\nPakistan\n220,900,000\n\n\nBrazil\n212,600,000\n\n\nNigeria\n206,100,000\n\n\nBangladesh\n166,300,000\n\n\nRussia\n146,700,000\n\n\nMexico\n126,000,000"
+    "objectID": "index.html#part-1-building-your-teams-dependency-culture",
+    "href": "index.html#part-1-building-your-teams-dependency-culture",
+    "title": "Open Source Dependency Management and Supply Chains",
+    "section": "Part 1: Building Your Team’s Dependency Culture",
+    "text": "Part 1: Building Your Team’s Dependency Culture\n\n1.1 Establishing Shared Ownership\nThe Challenge: Dependencies often become “someone else’s problem” until they break something critical.\nAction Items:\n\nDesignate rotating dependency champions (quarterly rotation)\nCreate a dedicated communication channel (#dependencies)\nAdd dependency review to your PR checklist\nDevelop strategies for removing or replacing dependencies where possible\nDocument who to contact for different dependency ecosystems\n\nTeam Discussion Prompts:\n\nWhat dependency issues keep us up at night?\nWhich dependencies do we struggle with most?\nWhat are we already doing well in our dependency management?"
   },
   {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
-    "title": "An example report",
-    "section": "",
-    "text": "This resource was generated as part of CZI’s EOSS Community Calls during late 2024 with Organizational Mycology facilitating discussions, gathering input, and generating the final document. Participants in the calls, and open comment periods are given co-authorship in alphabetical order by last name."
+    "objectID": "index.html#part-2-moving-from-reactive-to-proactive",
+    "href": "index.html#part-2-moving-from-reactive-to-proactive",
+    "title": "Open Source Dependency Management and Supply Chains",
+    "section": "Part 2: Moving from Reactive to Proactive",
+    "text": "Part 2: Moving from Reactive to Proactive\n\n2.1 The Dependency Maturity Model\n\n\n\n\n\n\n\n\nStage\nCharacteristics\nNext Steps\n\n\n\n\nFirefighting\n• Updates only when things break • No visibility into dependencies • Manual, ad-hoc processes\nStart tracking manually\n\n\nAware\n• Know what dependencies exist • Some automated scanning • Reactive to security alerts\nImplement basic automation\n\n\nManaged\n• Regular update cycles • Automated testing • Clear ownership\nDevelop update policies\n\n\nOptimized\n• Proactive monitoring • Dependency health metrics • Upstream engagement\nContribute back upstream\n\n\n\n\n\n2.2 Essential Capabilities Checklist\nTechnical Prerequisites:\n\nAutomated testing suite\nLockfiles or similar reproducibility mechanisms\nDependency scanning in CI/CD\nSBOM generation capability\n\nSocial Prerequisites:\n\nClear communication channels with upstream projects\nRegular team discussions about dependencies\nDocumented escalation paths\nTime allocated for dependency maintenance"
+  },
+  {
+    "objectID": "index.html#part-3-practical-implementation-guide",
+    "href": "index.html#part-3-practical-implementation-guide",
+    "title": "Open Source Dependency Management and Supply Chains",
+    "section": "Part 3: Practical Implementation Guide",
+    "text": "Part 3: Practical Implementation Guide\n\n3.1 Week 1-2: Discovery Phase\nInventory Your Dependencies:\n\nGenerate a complete dependency tree\nIdentify critical vs. nice-to-have dependencies\nMap dependencies to team members who understand them\nNote any dependencies without clear maintainers\n\nTools to Consider:\n\nGitHub/GitLab dependency graphs\nEcosyste.ms for ecosystem-wide visibility\nLanguage-specific tools (npm audit, pip-audit, etc.)\n\n\n\n3.2 Week 3-4: Establish Baselines\nSet Up Monitoring:\n# Example: Monthly Dependency Review Checklist\n- [ ] Run security scans\n- [ ] Review automated PR success rates\n- [ ] Check upstream project health\n- [ ] Update team wiki/documentation\n- [ ] Discuss any concerning trends\nConfigure Automation Thoughtfully:\n\nStart with security-only updates\nLimit update frequency (e.g., max 5 PRs/week)\nGroup related updates\nEnsure CI/CD catches breaking changes\n\n\n\n3.3 Week 5-6: Build Processes\nCreate Communication Workflows:\n\nEstablish Review Practices: * Add dependency impact to PR templates * Require justification for new dependencies * Consider “dependency cooldown” settings in dependency tools"
+  },
+  {
+    "objectID": "index.html#part-4-advanced-strategies",
+    "href": "index.html#part-4-advanced-strategies",
+    "title": "Open Source Dependency Management and Supply Chains",
+    "section": "Part 4: Advanced Strategies",
+    "text": "Part 4: Advanced Strategies\n\n4.1 Reducing Dependency Surface Area\nThe “Hedge Trimming” Approach:\n\nAudit current dependencies quarterly\nIdentify barely-used dependencies\nConsider inlining simple utilities\nMake heavy dependencies optional\nSplit packages to isolate dependency-heavy features\n\n\n\n4.2 Upstream Engagement\nBuilding Relationships:\n\nJoin upstream project communities\nContribute fixes back\nShare your use cases\nParticipate in roadmap discussions\n\nEarly Warning Systems:\n\nSubscribe to upstream release notes\nMonitor deprecation notices\nTrack upstream issue trackers\nBuild relationships with maintainers\n\n\n\n4.3 Container and Deployment Strategies\nReproducibility Approaches:\n\nUse containers for consistent environments\nImplement proper tagging strategies\nDocument system-level dependencies\nConsider managed build systems (like Bioconductor’s)"
+  },
+  {
+    "objectID": "index.html#part-5-keeping-it-fresh",
+    "href": "index.html#part-5-keeping-it-fresh",
+    "title": "Open Source Dependency Management and Supply Chains",
+    "section": "Part 5: Keeping It Fresh",
+    "text": "Part 5: Keeping It Fresh\n\n5.1 Regular Team Activities\nMonthly Dependency Coffee Chat:\n\n30-minute informal discussion\nRotate who presents a “dependency of the month”\nShare recent challenges and solutions\nCelebrate successful updates\n\nQuarterly Dependency Health Check:\n\nReview policy effectiveness\nAnalyze automation metrics (e.g., % of automated PRs merged)\nIdentify process improvements\nPlan for major updates"
+  },
+  {
+    "objectID": "index.html#resources-and-further-reading",
+    "href": "index.html#resources-and-further-reading",
+    "title": "Open Source Dependency Management and Supply Chains",
+    "section": "Resources and Further Reading",
+    "text": "Resources and Further Reading\n\nEssential Tools\n\nEcosyste.ms - Dependency ecosystem monitoring\nDependabot Insights - Automation effectiveness metrics\nCHAOSS Security Guide\nPyOpenSci Review Guide\n\n\n\nRecommended Reading\n\nDependency Cooldowns\nCISA SBOM Resources\nLanguage-specific security guides\n\n\n\nCommunity Resources\n\nJoin #dependency-management in your language community\nCHAOSS working groups\nOpenSSF Best Practices Badge program\n\n\nRemember: Good dependency management is a journey, not a destination. Start small, iterate often, and celebrate progress along the way.\n\nThis resource was generated as part of CZI’s EOSS Community Calls during late 2024 with Organizational Mycology facilitating discussions, gathering input, and generating the final document. Participants in the calls, and open comment periods are given co-authorship in alphabetical order by last name."
   },
   {
     "objectID": "CONTRIBUTING.html",
