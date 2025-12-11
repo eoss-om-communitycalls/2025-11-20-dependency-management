@@ -113,6 +113,7 @@ Managing dependencies in open source projects is about people, processes, and cu
 
 
 **Establish Review Practices:**
+
 * Add dependency impact to PR templates
 * Require justification for new dependencies
 * Consider “dependency cooldown” settings in dependency tools
